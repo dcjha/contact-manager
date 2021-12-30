@@ -26,11 +26,11 @@ class AddContact extends React.Component {
                 <form className = "ui form" onSubmit = {this.add}>
                     <div className = "field">
                         <label>Name</label>
-                        <input type= "text" name = "email" placeholder = "Name"></input>
+                        <input type= "text" name = "name" value = {this.state.name}  onChange={ (e) => this.setState({name : e.target.value})}  placeholder = "Name"></input>
                     </div>
                     <div className = "field">
                         <label>Email</label>
-                        <input type= "text" name = "email" placeholder = "Email"></input>
+                        <input type= "text" name = "email"  value = {this.state.email} onChange={ (e) => this.setState({email : e.target.value})} placeholder = "Email"></input>
                     </div>
                     <button className = "ui button blue"> Add</button>
                 </form>
