@@ -3,7 +3,7 @@ import user from '../images/user.png'
 import './ContactCard.css';
 
 const ContactCard = (props) =>{
-    const {name, email}  = props.contact
+    const {name, email, id}  = props.contact
     return(
         <div className = "c1" >
             <img className = "ui avatar image" alt ="usericon" src = {user}/>
@@ -16,7 +16,7 @@ const ContactCard = (props) =>{
                 </div>
                 
             </div>
-            <i style = {{color : "red", float : "right" ,marginTop : "1px"}} className = "trash alternate outline icon"></i>
+            <i onClick = {()=>{props.getContactIdHandler(id)}} style = {{color : "red", float : "right" ,marginTop : "1px"}} className = "trash alternate outline icon"></i>
         </div>
     )
 }
