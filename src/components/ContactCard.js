@@ -1,9 +1,12 @@
 import React from 'react'
+import user from '../images/user.png'
+import './ContactCard.css';
 
 const ContactCard = (props) =>{
     const {name, email}  = props.contact
     return(
-        <div className = "item">
+        <div className = "c1" >
+            <img className = "ui avatar image" alt ="usericon" src = {user}/>
             <div className = "content">
                 <div className = "header">
                     {name}
@@ -11,8 +14,9 @@ const ContactCard = (props) =>{
                 <div>
                     {email}
                 </div>
-                <i style = {{color : "red", marginTop : "5px"}} className = "trash alternate outline icon"></i>
+                
             </div>
+            <i style = {{color : "red", float : "right" ,marginTop : "1px"}} className = "trash alternate outline icon"></i>
         </div>
     )
 }
