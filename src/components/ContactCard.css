@@ -1,0 +1,7 @@
+    .c1{
+    border: 2pt;
+    border-color: red;
+    background: yellow;
+    margin-top: 1pt;
+    display: flex   ;
+}
